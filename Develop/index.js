@@ -22,13 +22,13 @@ inquirer
         },
         {
             type: 'input',
-            name: 'use',
+            name: 'usage',
             message: 'How would someone try to use this application?',
         },
         {
             type: 'checkbox',
             message: 'What license was used for this application?',
-            name: 'lisence',
+            name: 'license',
             choices: ['MIT', 'IBM', 'ISC'],
         },
         {
@@ -38,7 +38,7 @@ inquirer
         },
         {
             type: 'input',
-            name: 'instructions',
+            name: 'tests',
             message: 'What are the test instructions for this application?',
         },
         {
@@ -54,11 +54,33 @@ inquirer
     ])
     // console.log(data)
     .then((data) => {
-        const filename = `newREADME`;
+        const filename = `newREADME.md`;
 
         fs.writeFile(filename, 
-            `# ${data.title}`, '\t',
-            JSON.stringify(data, null, '\t'), 
+            `# ${data.title}
+## Table of Contents
+    * [Description](#description)
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributors](#contributors)
+    * [Tests](#tests)
+    * [Questions](#quetsions)
+## Description
+${data.description}
+## Installation
+${data.installation}
+## Usage
+${data.usage}
+## License
+${data.license}
+## Contributors
+${data.contributors}
+## Tests
+${data.tests}
+## Questions
+Please see my github:  [Github Profile](https://github.com/${data.github})
+<br>You can ask me questions here: ${data.email}`,
             
             (err) =>
             err ? console.log(err) : console.log('Success!')
