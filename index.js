@@ -73,14 +73,14 @@ ${data.installation}
 ## Usage
 ${data.usage}
 ## License
-${generateMarkdown(data.license)}
+${renderLicenseSection(data.license)}
 ## Contributors
 ${data.contributors}
 ## Tests
 ${data.tests}
 ## Questions
 Please see my github:  [Github Profile](https://github.com/${data.github})
-You can ask me questions here: ${data.email}`,
+<br>You can ask me questions here: ${data.email}`,
             
             (err) =>
             err ? console.log(err) : console.log('Success!')
@@ -89,23 +89,39 @@ You can ask me questions here: ${data.email}`,
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-
-}
+// function renderLicenseBadge(license) {
+//     if(data.license === undefined){
+//         return(" ");
+//     }else 
+//     {renderLicenseLink(data.license)};
+// } 
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+    console.log(license);
+    if(license == "MIT"){
+        return ('![License: MIT](https://img.shields.io/badge/License-MIT-blue)')
+    } else if (license == "IBM") {
+        return ('![License: IBM](https://img.shields.io/badge/License-IBM-blue)')
+    } else if (license == "ISC") {
+        return ('![License: ISC](https://img.shields.io/badge/License-ISC-blue)')
+    } else {
+        return (' ')
+    }
+    
+};
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-    return `# ${data.title}`;
+// function generateMarkdown(data) {
+//     return `# ${data.license}`;
+    
 
-}
+// }
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) { }
 
