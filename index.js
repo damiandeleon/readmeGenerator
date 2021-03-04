@@ -65,7 +65,7 @@ inquirer
 * [License](##license)
 * [Contributors](##contributors)
 * [Tests](##tests)
-* [Questions](##quetsions)
+* [Questions](##questions)
 ## Description
 ${data.description}
 ## Installation
