@@ -79,7 +79,7 @@ ${data.contributors}
 ## Tests
 ${data.tests}
 ## Questions
-Please see my github | Contact me for questions :speech_balloon:
+Please see my github | Contact me for questions
 ------------ | -------------
 [Github Profile](https://github.com/${data.github}) | ${data.email}`,
             (err) =>
@@ -93,11 +93,11 @@ Please see my github | Contact me for questions :speech_balloon:
 function renderLicenseSection(license) {
     console.log(license);
     if(license == "MIT"){
-        return ('![License: MIT](https://img.shields.io/badge/License-MIT-blue)(https://opensource.org/licenses/MIT)')
+        return ('[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)')
     } else if (license == "IBM") {
-        return ('![License: IBM](https://img.shields.io/badge/License-IBM-blue)(https://opensource.org/licenses/IBM)')
+        return ('[![License: IBM](https://img.shields.io/badge/License-IBM-blue)](https://opensource.org/licenses/IBM)')
     } else if (license == "ISC") {
-        return ('![License: ISC](https://img.shields.io/badge/License-ISC-blue)(https://opensource.org/licenses/ISC)')
+        return ('[![License: ISC](https://img.shields.io/badge/License-ISC-blue)](https://opensource.org/licenses/ISC)')
     } else {
         return (' ')
     }
