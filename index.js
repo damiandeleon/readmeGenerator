@@ -79,54 +79,27 @@ ${data.contributors}
 ## Tests
 ${data.tests}
 ## Questions
-Please see my github:  [Github Profile](https://github.com/${data.github})
-<br>You can ask me questions here: ${data.email}`,
-            
+Please see my github | Contact me for questions :speech_balloon:
+------------ | -------------
+[Github Profile](https://github.com/${data.github}) | ${data.email}`,
             (err) =>
             err ? console.log(err) : console.log('Success!')
         )
     })
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-// function renderLicenseBadge(license) {
-//     if(data.license === undefined){
-//         return(" ");
-//     }else 
-//     {renderLicenseLink(data.license)};
-// } 
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
     console.log(license);
     if(license == "MIT"){
-        return ('![License: MIT](https://img.shields.io/badge/License-MIT-blue)')
+        return ('![License: MIT](https://img.shields.io/badge/License-MIT-blue)(https://opensource.org/licenses/MIT)')
     } else if (license == "IBM") {
-        return ('![License: IBM](https://img.shields.io/badge/License-IBM-blue)')
+        return ('![License: IBM](https://img.shields.io/badge/License-IBM-blue)(https://opensource.org/licenses/IBM)')
     } else if (license == "ISC") {
-        return ('![License: ISC](https://img.shields.io/badge/License-ISC-blue)')
+        return ('![License: ISC](https://img.shields.io/badge/License-ISC-blue)(https://opensource.org/licenses/ISC)')
     } else {
         return (' ')
     }
     
 };
-
-// TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//     return `# ${data.license}`;
-    
-
-// }
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) { }
-
-// // TODO: Create a function to initialize app
-// function init() { }
-
-// // Function call to initialize app
-// init();
